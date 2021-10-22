@@ -9,9 +9,17 @@ const CardList = () => {
 
     const [users, setUsers] = useState([]);
 
+    const getUsers = () => {
+        return (
+            setTimeout(() => {
+                axios.get('https://api.github.com/users')
+                    .then((res)=>{setUsers(res.data)})
+            }, 2000)
+        )
+    }
+
         useEffect(()=>{
-            axios.get('https://api.github.com/users')
-            .then((res)=>{setUsers(res.data)});
+            getUsers();
         }, []);
 
     return (
