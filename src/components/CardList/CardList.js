@@ -18,7 +18,7 @@ const CardList = () => {
         <div className='card-list'>
             {users.map((user) => {
                 return(
-                    <div>
+                    <div key={user.node_id}>
                         <CardUser data={user} />
                     </div>
                 )

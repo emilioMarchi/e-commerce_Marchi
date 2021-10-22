@@ -1,0 +1,11 @@
+.cart {
+    display: flex;
+    align-items: center;
+}
+.cart p {
+    margin: 0 1rem;
+}
+.cart i {
+    font-size: 1.4rem;
+    color: rgb(99, 87, 70);
+}

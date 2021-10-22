@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Card, Icon, Image } from 'semantic-ui-react';
+import React from 'react';
+import { Card, Image } from 'semantic-ui-react';
+import './CardUser.css';
 
 const CardUser = ({data}) => {
 

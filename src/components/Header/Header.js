@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import Cart from '../Cart/Cart';
 
 const Header = () => {
     return (
@@ -10,6 +11,7 @@ const Header = () => {
                     <li>Favorites</li>
                     <li>Contact</li>
                 </ul>
+                <Cart />
             </nav>
         </div>
     )

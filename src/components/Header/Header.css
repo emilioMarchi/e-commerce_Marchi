@@ -1,7 +1,11 @@
 .header nav {
-    text-align: center;
+    width: 100%; height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .header nav ul {
+    width: 33%;
     display: flex;
     justify-content: space-evenly;
 }
