@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import CardUser from '../CardUser/CardUser';
 import axios from 'axios';
+
+import CardUser from '../CardUser/CardUser';
+
+import './CardList.css';
 
 const CardList = () => {
 
@@ -13,7 +16,13 @@ const CardList = () => {
 
     return (
         <div className='card-list'>
-            <CardUser data={users[0]} />
+            {users.map((user) => {
+                return(
+                    <div>
+                        <CardUser data={user} />
+                    </div>
+                )
+            })}
         </div>
     )
 }
