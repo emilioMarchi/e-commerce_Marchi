@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
-import CardList from '../components/CardListContainer/CardListContainer';
 
 const CardDetail = ({ match }) => {
     const [user, setUsers] = useState();
