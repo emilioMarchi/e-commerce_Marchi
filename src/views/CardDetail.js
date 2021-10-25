@@ -3,8 +3,8 @@ import axios from 'axios';
 
 
 const CardDetail = ({ match }) => {
-    const [user, setUsers] = useState();
-
+    const [users, setUsers] = useState();
+    console.log('MATCH', match);
 
     useEffect(() => {
             axios(`https://api.github.com/users`)
