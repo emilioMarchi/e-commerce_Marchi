@@ -2,14 +2,16 @@ import React from 'react';
 import './Header.css';
 import Cart from '../Cart/Cart';
 
+import { Link } from 'react-router-dom';
+
 const Header = () => {
     return (
         <div className='header'>
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>Favorites</li>
-                    <li>Contact</li>
+                    <Link to='/'>Home</Link>
+                    <Link to='/favorites'>Favorites</Link>
+                    <Link to='/contact'>Contact</Link>
                 </ul>
                 <Cart />
             </nav>

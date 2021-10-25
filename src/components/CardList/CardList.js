@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+
 
 import CardUser from '../CardUser/CardUser';
 
@@ -26,8 +28,10 @@ const CardList = () => {
         <div className='card-list'>
             {users.map((user) => {
                 return(
-                    <div key={user.node_id}>
-                        <CardUser data={user} />
+                    <div key={user.id}>
+                        <Link to={`/detail/${user.id}`}>
+                            <CardUser data={user} />
+                        </Link>
                     </div>
                 )
             })}
