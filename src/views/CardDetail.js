@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+
 import CardUser from '../components/CardUser/CardUser';
 
 
 const CardDetail = ({ match }) => {
-
     const [user, setUser] = useState([]);
+    const params = match.params.id;
 
     useEffect(() => {
             axios(`https://www.breakingbadapi.com/api/characters/${params}`)
