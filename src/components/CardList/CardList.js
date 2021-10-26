@@ -14,7 +14,7 @@ const CardList = () => {
     const getUsers = () => {
         return (
             setTimeout(() => {
-                axios.get('https://api.github.com/users')
+                axios('https://www.breakingbadapi.com/api/characters')
                     .then((res)=>{setUsers(res.data)})
             }, 2000)
         )
@@ -28,8 +28,8 @@ const CardList = () => {
         <div className='card-list'>
             {users.map((user) => {
                 return(
-                    <div key={user.id}>
-                        <Link to={`/detail/${user.id}`}>
+                    <div key={user.char_id}>
+                        <Link to={`/detail/${user.char_id}`}>
                             <CardUser data={user} />
                         </Link>
                     </div>
