@@ -4,6 +4,12 @@ import './Account.css';
 const Account = () => {
 
     const [account, setAccount] = useState(0);
+    const [amount, setAmount] = useState(0);
+
+    const getAccount = () => {
+        const amount = account;
+        setAmount(amount);
+    }
 
     const sumAccount = () => {
         setAccount(account + 1)
@@ -20,7 +26,7 @@ const Account = () => {
                 <button onClick={sumAccount} >+</button>
             </div>
             <div className='add-info'>
-            <button >Agregar al carrito</button>
+            <button onClick={getAccount} >Agregar al carrito</button>
             </div>
         </div>
     )
