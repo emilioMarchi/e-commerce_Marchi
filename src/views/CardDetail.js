@@ -2,11 +2,14 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
 import CardUser from '../components/CardUser/CardUser';
+import Account from '../components/Account/Account';
 
 
 const CardDetail = ({ match }) => {
     const [user, setUser] = useState([]);
     const params = match.params.id;
+
+    console.log(Account.account)
 
     useEffect(() => {
             axios(`https://www.breakingbadapi.com/api/characters/${params}`)
@@ -20,6 +23,7 @@ const CardDetail = ({ match }) => {
                     return(
                         <div key={item.char_id}>
                             <CardUser data={item} />
+                            <Account/>
                         </div>
                     )
                 })
