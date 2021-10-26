@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+
 import CardUser from '../components/CardUser/CardUser';
 
 
 const CardDetail = ({ match }) => {
     const [user, setUser] = useState([]);
     const params = match.params.id;
-    console.log(user)
 
 
 
