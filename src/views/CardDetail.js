@@ -1,20 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
 import CardUser from '../components/CardUser/CardUser';
 
 
 const CardDetail = ({ match }) => {
-<<<<<<< HEAD
-    const [users, setUsers] = useState();
-    console.log('MATCH', match);
-=======
+
     const [user, setUser] = useState([]);
-    const params = match.params.id;
-    console.log(user)
-
-
->>>>>>> rama
 
     useEffect(() => {
             axios(`https://www.breakingbadapi.com/api/characters/${params}`)
