@@ -8,10 +8,10 @@ const CardUser = ({data}) => {
   return(
       <div className='card-user'>
         <Card>
-            <Image src={data.avatar_url} wrapped ui={false} />
+            <Image src={data.img} wrapped ui={false} />
             <Card.Content>
-            <Card.Header>{data.login}</Card.Header>
-            <Card.Meta>{data.type}</Card.Meta>
+            <Card.Header>{data.name}</Card.Header>
+            <Card.Meta>{data.occupation}</Card.Meta>
             </Card.Content>
         </Card>
       </div>
